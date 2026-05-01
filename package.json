@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://ShorrohS.github.io/rohit-portfolio/",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "NODE_ENV=production vite build",
+    "build:full": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
